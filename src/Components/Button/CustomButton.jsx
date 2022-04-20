@@ -1,6 +1,6 @@
 import {useState} from 'react'
 
-const Post = (props) => {
+const CustomButton = (props) => {
 
     return(
         <div>
@@ -9,4 +9,4 @@ const Post = (props) => {
     );
 }
 
-export default Post;
+export default CustomButton
