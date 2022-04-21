@@ -2,11 +2,11 @@ const DisplayPost = (props) => {
 
     return(
         <div>
+            <div>
             {props.parentPost.map((post, index) => {
                 return(
                     <tr key={index}>
                         <tr>
-                            <td>{index + 1}</td>
                             <td>{post.name}</td>
                         </tr>
                         <tr>
@@ -15,6 +15,7 @@ const DisplayPost = (props) => {
                     </tr>
                 );
             })}
+            </div>
         </div>
     );
 }
