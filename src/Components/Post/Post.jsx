@@ -1,6 +1,7 @@
 import {useState} from 'react';
 import CreatePost from './CreatePost';
 import DisplayPost from './DisplayPosts';
+import './Post.css'
 
 const Post = (props) => {
 
@@ -12,10 +13,15 @@ const Post = (props) => {
     }
     return(
         <div>
+            <div className='post-border-box'>
                 <CreatePost parentPost={addNewPost}/>
-            <table>
-                <DisplayPost parentPost={posts}/>
-            </table>
+            </div>
+            <div className='post-border-box'>
+                <table>
+                    <DisplayPost parentPost={posts}/>
+                </table>
+            </div>
+            
         </div>
     );
 }
