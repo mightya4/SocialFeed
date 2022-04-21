@@ -1,25 +1,28 @@
 import React, { useState } from "react";
-const CreatePost = () => {
+const CreatePost = (props) => {
 
-    const [createPost, setCreatePost] = useState([])
-    
+    const [name, setName] = useState('');
+    const [post, setPost] = useState('');
+
+    function handleCreatePost(event){
+        event.preventDefault();
+        let postEntry = {
+            name: name,
+            post: post,
+        };
+    }
     return(
-        <div>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>David Lagrange</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th>Post</th>
-                        <th>"I love playing guitar. Does anyone want to play with me?"</th>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+        <form onSubmit={handleCreatePost}>
+            <div>
+                <label>Name</label>
+                <input type='text'></input>
+            </div>
+            <div>
+                <label>Post</label>
+                <input type='text'></input>
+            </div>
+            <button type='submit'>Create</button>
+        </form>
     );
 }
 

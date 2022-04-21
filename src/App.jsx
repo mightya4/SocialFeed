@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import CreatePost from './Components/ManipulatePost/CreatePost'
-import DisplayPost from "./Components/ManipulatePost/DisplayPosts";
+import CreatePost from './Components/Post/CreatePost'
+import DisplayPost from "./Components/Post/DisplayPosts";
 function App() {
 
   const [name, setName] = useState([])
