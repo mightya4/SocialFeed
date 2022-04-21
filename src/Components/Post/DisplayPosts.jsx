@@ -7,12 +7,17 @@ const DisplayPost = (props) => {
                 return(
                     <tr key={index}>
                         <tr>
-                            <td>{post.name}</td>
+                            <td><b>{post.name}</b></td>
                         </tr>
+                        <br></br>
                         <tr>
                             <td>{post.post}</td>
                         </tr>
+                        <br></br>
+                        <br></br>
                     </tr>
+                    
+                    
                 );
             })}
             </div>
