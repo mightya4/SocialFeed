@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import CreatePost from './Components/Post/CreatePost'
-import DisplayPost from "./Components/Post/DisplayPosts";
+import Post from "./Components/Post/Post";
 function App() {
 
   const [name, setName] = useState([])
@@ -9,8 +8,7 @@ function App() {
 
   return(
     <div>
-        <CreatePost/>
-        <DisplayPost/>
+        <Post/>
     </div>
 );
 }
