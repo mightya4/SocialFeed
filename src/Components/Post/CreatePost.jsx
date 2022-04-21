@@ -10,6 +10,7 @@ const CreatePost = (props) => {
             name: name,
             post: post,
         };
+        props.addNewPostProperty(postEntry);
     }
     return(
         <form onSubmit={handleCreatePost} className='form-grid'>
@@ -20,8 +21,9 @@ const CreatePost = (props) => {
             <div className="form-group">
                 <label>Post</label>
                 <input type='text' className="form-control" value= {post} onChange={(event) => {setPost(event.target.value)}}></input>
+                <button type='submit'>Create</button>
             </div>
-            <button type='submit'>Create</button>
+            
         </form>
     );
 }

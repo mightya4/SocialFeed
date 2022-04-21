@@ -13,13 +13,17 @@ const Post = (props) => {
     }
     return(
         <div>
-            <div className='post-border-box'>
-                <CreatePost parentPost={addNewPost}/>
+            <div>
+                <div className='post-border-box'>
+                    <CreatePost addNewPostProperty={addNewPost}/>
+                </div>
             </div>
-            <div className='post-border-box'>
-                <table>
-                    <DisplayPost parentPost={posts}/>
-                </table>
+            <div>
+                <div className='post-border-box'>
+                    <table>
+                        <DisplayPost parentPost={posts}/>
+                    </table>
+                </div>
             </div>
             
         </div>
