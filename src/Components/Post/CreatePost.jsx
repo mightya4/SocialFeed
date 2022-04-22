@@ -3,6 +3,10 @@ const CreatePost = (props) => {
 
     const [name, setName] = useState('');
     const [post, setPost] = useState('');
+    const resetPostEntry = () => {
+        setName('')
+        setPost('');
+    }
 
     function handleCreatePost(event){
         event.preventDefault();
@@ -11,6 +15,7 @@ const CreatePost = (props) => {
             post: post,
         };
         props.addNewPostProperty(postEntry);
+        resetPostEntry();
     }
     return(
         <form onSubmit={handleCreatePost} className='form-grid'>
