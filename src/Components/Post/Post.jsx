@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import NavBar from '../Navigation/NavBar';
 import CreatePost from './CreatePost';
 import DisplayPost from './DisplayPosts';
 import './Post.css'
@@ -13,6 +14,11 @@ const Post = (props) => {
     }
     return(
         <div>
+            <div>
+                <div>
+                    <NavBar/>
+                </div>
+            </div>
             <div>
                 <div className='post-border-box'>
                     <CreatePost addNewPostProperty={addNewPost}/>
