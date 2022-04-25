@@ -20,21 +20,22 @@ const Post = (props) => {
                     <NavBar/>
                 </div>
             </div>
-            <div>
-                <div className='post-border-box'>
-                    <CreatePost addNewPostProperty={addNewPost}/>
+            <div className='post-background'>
+                <div>
+                    <div className='post-border-box'>
+                        <CreatePost addNewPostProperty={addNewPost}/>
+                    </div>
                 </div>
-            </div>
-            <div>
-                <div className='post-border-box'>
-                    <div className='table'>
-                        <table>
-                            <DisplayPost parentPost={posts}/>
-                        </table>
+                <div>
+                    <div className='post-border-box'>
+                        <div className='table'>
+                            <table>
+                                <DisplayPost parentPost={posts}/>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
-            
         </div>
     );
 }
