@@ -3,6 +3,7 @@ import NavBar from '../Navigation/NavBar';
 import CreatePost from './CreatePost';
 import DisplayPost from './DisplayPosts';
 import './Post.css'
+import './PostTable.css'
 
 const Post = (props) => {
 
@@ -26,9 +27,11 @@ const Post = (props) => {
             </div>
             <div>
                 <div className='post-border-box'>
-                    <table>
-                        <DisplayPost parentPost={posts}/>
-                    </table>
+                    <div className='table'>
+                        <table>
+                            <DisplayPost parentPost={posts}/>
+                        </table>
+                    </div>
                 </div>
             </div>
             
